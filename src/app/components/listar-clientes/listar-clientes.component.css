@@ -8,3 +8,13 @@ img {
 .card-title {
     border-bottom: 1px solid rgba(0, 0, 0, 0.39);
 }
+th td>button {
+    font-size: .80rem;
+}
+td {
+    font-size: .90rem;
+}
+
+.btn-warning {
+    color: white;
+}
