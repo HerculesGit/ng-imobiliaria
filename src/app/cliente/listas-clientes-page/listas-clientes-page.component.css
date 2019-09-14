@@ -1,0 +1,11 @@
+.input-group>input {
+    width: 400px;
+}
+
+#btnPesquisar {
+    white-space: nowrap;
+}
+
+.bd-light {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
