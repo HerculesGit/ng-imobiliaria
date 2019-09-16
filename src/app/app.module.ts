@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CarregandoComponent } from './components/carregando/carregando.component';
 import { ListasClientesPageComponent } from './cliente/listas-clientes-page/listas-clientes-page.component';
 import { EditarClienteComponentComponent } from './cliente/editar-cliente-component/editar-cliente-component.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditarClienteComponentComponent } from './cliente/editar-cliente-compon
     MenuComponent,
     CarregandoComponent,
     ListasClientesPageComponent,
-    EditarClienteComponentComponent
+    EditarClienteComponentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

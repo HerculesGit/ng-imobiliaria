@@ -1,0 +1,28 @@
+.card-img-top {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+h1, p {
+    color: white;
+}
+.frase {
+    position: fixed;
+    top: 15rem;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../../assets/images/background_home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    top: 0;
+    left: 0;
+    
+}
