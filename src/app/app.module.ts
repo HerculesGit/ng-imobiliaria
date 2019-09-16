@@ -7,6 +7,7 @@ import { ListarClientesComponent } from './cliente/listar-clientes/listar-client
 import { MenuComponent } from './components/menu/menu.component';
 import { CarregandoComponent } from './components/carregando/carregando.component';
 import { ListasClientesPageComponent } from './cliente/listas-clientes-page/listas-clientes-page.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListasClientesPageComponent } from './cliente/listas-clientes-page/list
     ListarClientesComponent,
     MenuComponent,
     CarregandoComponent,
-    ListasClientesPageComponent
+    ListasClientesPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
