@@ -31,6 +31,10 @@ export class ListarClientesComponent implements OnInit {
     this.service.remover(cliente);
   }
 
+  editar(index: number, cliente: Cliente) {
+    this.service.editar(index, cliente);
+  }
+
   setarClienteADeletar(cliente: Cliente) {
     this.clienteADeletar = cliente;
     console.log('parametro: ' + cliente.nomeCompleto)

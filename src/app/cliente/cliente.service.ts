@@ -23,6 +23,10 @@ export class ClienteService {
     this.clientes.splice(index, 1);
   }
 
+  editar(index: number, cliente: Cliente): void {
+    this.clientes[index] = cliente;
+  }
+
   public getAllClientes(): Cliente[] {
     let amanda: Cliente = new PessoaFisica('473.173.571-89');
     let kelvin: Cliente = new PessoaJuridica('20.844.166/0001-00');
