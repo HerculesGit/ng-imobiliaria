@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { CarregandoComponent } from './components/carregando/carregando.componen
 import { ListasClientesPageComponent } from './cliente/listas-clientes-page/listas-clientes-page.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { LoginComponent } from './pages/login/login.component';
     CarregandoComponent,
     ListasClientesPageComponent,
     EditarClienteComponent,
-    LoginComponent
+    LoginComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

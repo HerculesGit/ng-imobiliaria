@@ -26,15 +26,22 @@
         <div class="btn-group">
           <button type="button" class="btn btn-success p-1 mr-1"><i class="fas fa-eye"></i></button>
           <button type="button" class="btn btn-warning p-1 mr-1"><i class="fas fa-pen-square"></i></button>
-          <button type="button" class="btn btn-danger p-1" (click)="remover(cliente)"><i
-              class="fas fa-trash-alt"></i></button>
+          <button type="button" class="btn btn-danger p-1" (click)="showDialog = !showDialog" data-toggle="modal"
+            data-target="#exampleModalCenter"><i class="fas fa-trash-alt"></i></button>
+          <app-dialog [(visible)]="showDialog">
+          </app-dialog>
+
         </div>
       </td>
     </tr>
 
   </tbody>
 </table>
-
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+<app-dialog></app-dialog>
 
 <!-- acho que esse card-group deverá ficar no elemento que chamar esse componete, ou não... ainda não sei ->
 <div class="card-group">
