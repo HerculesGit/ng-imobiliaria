@@ -17,4 +17,8 @@ export class ListarClientesComponent implements OnInit {
     this.clientes = this.service.getAllClientes();
   }
 
+  remover(cliente: Cliente): void {
+    this.service.remover(cliente);
+  }
+
 }
