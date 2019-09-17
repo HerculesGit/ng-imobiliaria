@@ -11,17 +11,20 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Confirmar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <p *ngIf="recebeCliente" class="text-weight-bold mb-2">Deletar usuário
+          <mark>{{recebeCliente.nomeCompleto}}</mark></p>
+        <p class="font-weight-light">Essa operação não poderá ser desfeita</p>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary" (click)="feedback()" data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>

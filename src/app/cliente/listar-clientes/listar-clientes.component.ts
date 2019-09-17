@@ -9,6 +9,11 @@ import { ClienteService } from '../cliente.service';
 })
 export class ListarClientesComponent implements OnInit {
   private clientes: Cliente[];
+  nomeClienteADeletar: string;
+
+
+  clienteADeletar: Cliente;
+
   constructor(private service: ClienteService) {
     this.clientes = this.service.getAllClientes();
   }
@@ -17,8 +22,18 @@ export class ListarClientesComponent implements OnInit {
     this.clientes = this.service.getAllClientes();
   }
 
+  reciverFeedback(respostaFilho) {
+    console.log('Foi emitido o evento e chegou no pai >>>> ', respostaFilho);
+    this.remover(this.clienteADeletar);
+  }
+
   remover(cliente: Cliente): void {
     this.service.remover(cliente);
+  }
+
+  setarClienteADeletar(cliente: Cliente) {
+    this.clienteADeletar = cliente;
+    console.log('parametro: ' + cliente.nomeCompleto)
   }
 
 }

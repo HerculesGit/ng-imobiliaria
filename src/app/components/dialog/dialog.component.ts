@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Cliente } from 'src/app/cliente/cliente';
+import { PessoaFisica } from 'src/app/cliente/pessoaFisica';
 
 @Component({
   selector: 'app-dialog',
@@ -19,16 +21,25 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class DialogComponent implements OnInit {
-  @Input() closable = true;
-  @Input() visible: boolean;
-  @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() { }
+  // Poderia utilizar Input("dados") assim, no template dialog.component.html, quando chamado, ficaria
+  // <app-dialog [dados]></app-dialog> mas não é uma boa prática.
+  // Pronto! Desta forma podemos passar, não significa que você sempre precisa passar, mas sempre que quiser, passe
 
-  ngOnInit() { }
+  @Input() recebeCliente;
 
-  close() {
-    this.visible = false;
-    this.visibleChange.emit(this.visible);
+  @Output()
+  isRemover = new EventEmitter<boolean>();
+
+  constructor() {
+  }
+
+  feedback() {
+    this.isRemover.emit(true)
+  }
+
+  ngOnInit() {
+    console.log('>>>>' + this.recebeCliente)
   }
 }
